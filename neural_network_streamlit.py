@@ -6,26 +6,26 @@ import base64
 from tensorflow.keras.models import load_model
 
 
-# Function to encode the image as base64
-def get_base64_encoded_image(image_path):
-    with open(image_path, "rb") as img_file:
-        encoded = base64.b64encode(img_file.read()).decode()
-    return encoded
+# # Function to encode the image as base64
+# def get_base64_encoded_image(image_path):
+#     with open(image_path, "rb") as img_file:
+#         encoded = base64.b64encode(img_file.read()).decode()
+#     return encoded
 
 
-# Add a background image
-image_path = "E:/Guvi/VS_code/Final_Project/background_image.jpg"
-base64_image = get_base64_encoded_image(image_path)
+# # Add a background image
+# image_path = "E:\Guvi\VS_code\Final_Project\Main_folder\Neural_network-project\background_image.jpg"
+# base64_image = get_base64_encoded_image(image_path)
 
-page_bg_img = f'''
-<style>
-body {{
-    background-image: url("data:image/jpeg;base64,{base64_image}");
-    background-size: cover;
-}}
-</style>
-'''
-st.markdown(page_bg_img, unsafe_allow_html=True)
+# page_bg_img = f'''
+# <style>
+# body {{
+#     background-image: url("data:image/jpeg;base64,{base64_image}");
+#     background-size: cover;
+# }}
+# </style>
+# '''
+# st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Initialize session state for navigation
 if "sb" not in st.session_state:
@@ -42,7 +42,7 @@ if sb == "Home":
     st.session_state.sb = "Home"
     st.title("📚 Welcome to the Customer Churn Predictor! 📊")
 
-    st.image("E:\Guvi\VS_code\Final_Project\Bookstore.jpg", width=700,
+    st.image("E:/Guvi/VS_code/Final_Project/Main_folder/Neural_network-project/Bookstore.jpg", width=700,
              caption="Your data-driven journey starts here!")
 
     st.subheader("🔍 Discover Insights")
@@ -85,7 +85,8 @@ elif sb == 'Customer Churn Prediction':
 
     # Load the model
     try:
-        model = load_model('E:\Guvi\VS_code\Final_Project\model.h5')
+        model = load_model(
+            'E:/Guvi/VS_code/Final_Project/Main_folder/Neural_network-project/model.h5')
     except Exception as e:
         st.error(f"Error loading the model: {e}")
         model = None
