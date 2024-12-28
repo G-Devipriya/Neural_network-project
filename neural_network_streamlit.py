@@ -42,7 +42,7 @@ if sb == "Home":
     st.session_state.sb = "Home"
     st.title("📚 Welcome to the Customer Churn Predictor! 📊")
 
-    st.image("E:\Guvi\VS_code\Final_Project\Bookstore.jpg", width=600,
+    st.image("E:\Guvi\VS_code\Final_Project\Bookstore.jpg", width=700,
              caption="Your data-driven journey starts here!")
 
     st.subheader("🔍 Discover Insights")
