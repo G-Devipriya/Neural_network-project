@@ -1,0 +1,8 @@
+pandas
+sqlalchemy
+datetime
+numpy
+matplotlib.pyplot 
+seaborn
+tensorflow
+streamlit
