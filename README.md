@@ -23,28 +23,28 @@ We have access to historical data on book orders and customers, featuring detail
 
 ### Approach
 #### Data Processing:
-step 1: Clean and preprocess the dataset to ensure consistency and usability.
+Step 1: Clean and preprocess the dataset to ensure consistency and usability.
 
-step 2: Engineer features from attributes like order dates and loyalty scores to improve model performance.
+Step 2: Engineer features from attributes like order dates and loyalty scores to improve model performance.
 
 #### Exploratory Data Analysis (EDA):
-step 1: Visualize customer patterns and behaviors using Seaborn and Matplotlib.
+Step 1: Visualize customer patterns and behaviors using Seaborn and Matplotlib.
 
-step 2: Identify trends, such as the correlation between loyalty and churn or order frequency and churn rates.
+Step 2: Identify trends, such as the correlation between loyalty and churn or order frequency and churn rates.
 
 #### Model Development:
-step 1: Train a deep learning model using TensorFlow to predict churn behavior.
+Step 1: Train a deep learning model using TensorFlow to predict churn behavior.
 
-step 2: Optimize model performance with hyperparameter tuning and feature scaling.
+Step 2: Optimize model performance with hyperparameter tuning and feature scaling.
 
 #### Deployment:
-step 1: Integrate the trained model into a Streamlit web app for easy access and usability.
+Step 1: Integrate the trained model into a Streamlit web app for easy access and usability.
 
-step 2: Enable users to input customer data and receive churn predictions in real-time.
+Step 2: Enable users to input customer data and receive churn predictions in real-time.
 
 #### Key Findings
-step 1: Loyal Customers: Higher loyalty scores significantly reduce the likelihood of churn.
+Step 1: Loyal Customers: Higher loyalty scores significantly reduce the likelihood of churn.
 
-step 2: Order Frequency: Customers with fewer orders are more likely to churn.
+Step 2: Order Frequency: Customers with fewer orders are more likely to churn.
 
-step 3: Temporal Patterns: Churn behavior is evenly distributed across different years.
+Step 3: Temporal Patterns: Churn behavior is evenly distributed across different years.
