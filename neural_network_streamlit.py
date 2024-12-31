@@ -6,27 +6,6 @@ import base64
 from tensorflow.keras.models import load_model
 
 
-# # Function to encode the image as base64
-# def get_base64_encoded_image(image_path):
-#     with open(image_path, "rb") as img_file:
-#         encoded = base64.b64encode(img_file.read()).decode()
-#     return encoded
-
-
-# # Add a background image
-# image_path = "E:\Guvi\VS_code\Final_Project\Main_folder\Neural_network-project\background_image.jpg"
-# base64_image = get_base64_encoded_image(image_path)
-
-# page_bg_img = f'''
-# <style>
-# body {{
-#     background-image: url("data:image/jpeg;base64,{base64_image}");
-#     background-size: cover;
-# }}
-# </style>
-# '''
-# st.markdown(page_bg_img, unsafe_allow_html=True)
-
 # Initialize session state for navigation
 if "sb" not in st.session_state:
     st.session_state.sb = "Home"
@@ -40,9 +19,10 @@ sb = st.sidebar.radio('Main Menu', ['Home', 'Customer Churn Prediction', 'Learn 
 # Home page
 if sb == "Home":
     st.session_state.sb = "Home"
+
     st.title("📚 Welcome to the Customer Churn Predictor! 📊")
 
-    st.image("E:/Guvi/VS_code/Final_Project/Main_folder/Neural_network-project/Bookstore.jpg", width=700,
+    st.image("E:/Guvi/VS_code/Final_Project/Main_folder/Neural_network-project/logo.jpg", width=700,
              caption="Your data-driven journey starts here!")
 
     st.subheader("🔍 Discover Insights")
@@ -67,6 +47,7 @@ elif sb == 'Customer Churn Prediction':
     st.title("Churn Predictor")
 
     left_column, right_column = st.columns(2)
+
     p1 = left_column.number_input(
         "**Enter the number of days the customer has been buying books:**", min_value=0, max_value=2000, value=0)
     p2 = right_column.number_input(
@@ -114,16 +95,20 @@ elif sb == "Learn More":
         and take proactive steps to retain them.
                 """)
 
-    st.subheader("💡 Why Predict Churn?")
-    st.markdown(
+    left_col, right_col = st.columns(2)
+    left_col.subheader("💡 Why Predict Churn?")
+    left_col.markdown(
         """
         - **Save costs** by retaining valuable customers.
         - **Enhance loyalty** through targeted strategies.
         - Stay ahead with **data-driven decisions**.
         """)
 
-    st.markdown("Go back to the [Home Page](#) to start exploring.")
+    left_col.markdown("Go back to the [Home Page](#) to start exploring.")
 
     # Button to navigate back to "Home"
     if st.button("Back to Home"):
         st.session_state.sb = "Home"
+
+    right_col.image(
+        'E:/Guvi/VS_code/Final_Project/Main_folder/Neural_network-project/Customer_Churn.png', width=400)
